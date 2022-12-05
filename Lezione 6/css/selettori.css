@@ -1,0 +1,9 @@
+hr {
+    width: 80%;
+    margin: 50px auto;
+    color: bisque;
+}
+#winning {
+    background-color: red;
+    border-color: black;
+}

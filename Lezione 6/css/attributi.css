@@ -37,7 +37,8 @@ a {
   .testo_colorato{
     background-color: aliceblue;
     color: blue;}
-    .gabriele{
+    
+    .[href="gabriele"]{
         cursor: crosshair;
         background-color: yellow;
         color: black;
