@@ -1,0 +1,145 @@
+:root{
+    box-sizing: border-box;
+}
+*,
+::before,
+::after{
+    box-sizing: inherit;
+}
+body * + * {
+    margin-top: 1.5em;
+}
+body{
+    background-color: rgba(160, 85, 0, 0.69);
+}
+.container{
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.site-nav{
+    display: flex;
+    padding: 5em;
+    list-style-type: none;
+    background-color: brown;
+    border-radius: 2em;
+}
+.site-nav > li {
+    margin-top: 0;
+}
+.site-nav > li > a{
+    display: block;
+    padding: 0,5em 1em;
+    background-color: rgb(70, 21, 0);
+    color: white;
+    text-decoration: none;
+}
+.site-nav > li + li {
+    margin-left: 1,5em;
+
+}
+.site-nav > .nav-right {
+    margin-left: auto;
+}
+.site-nav > li:nth-child(1n+2) {
+    margin-left: .5em;
+
+}
+.site-nav >li.nav-right {
+    margin-left: auto;
+}
+main {
+    display: flex;
+}
+main > * + *{
+    margin-top: 0;
+    margin-left: 1.5em;
+}
+.title :first-child{
+margin-top: 0;
+}
+
+.title{
+    padding: 1.5em;
+    background-color: white;
+}
+
+.column.main{
+    flex: 3;
+}
+
+.column-sidebar{
+    flex: 1;
+}
+
+.column-sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+.column-sidebar > .title{
+    flex: 1;
+}
+
+.login-form h3 {
+    margin: 0;
+    font-size: .9em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+.login-form label {
+    text-align: left;
+    font-weight: bold;
+}
+.login-form input:not([type=checkbox]):not([type=radio]){
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    border: 1px solid #dedede;
+    padding: .5em 1em;
+}
+.login-form button{
+    margin-top: 1em;
+    border: 1px solid #cc6b5a;
+    background-color: white;
+    padding: .5em 1em;
+    cursor: pointer; 
+}
+
+.centered{
+    text-align: center;
+}
+
+.cost{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: .7;
+}
+
+.cost > span {
+    margin-top: 0;
+}
+
+.cost-currency {
+    font-size: 2rem;
+}
+
+.cost-dollars{
+    font-size: 4rem;
+}
+
+.cost-cents{
+    display: 1.5rem;
+    align-self: flex-start;
+}
+
+.cta-button{
+    display: block;
+    background-color: #cc6b5a;
+    color: white;
+    text-decoration: none;
+    padding: .5em 1em;
+}
