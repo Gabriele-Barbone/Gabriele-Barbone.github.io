@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Pseudoclass</title>
+    <link class="stylesheet" href="css/pseudoform.css">
+</head>
+<body>
+    <form>
+        <p>Compila il modulo di iscrizione:</p>
+        <label>Nome Completo: <input name="firstname" type="text"></label>
+        <label for="email">Email Address:</label>
+        <input name="email" type="email" value="na@me@example.com">
+        <hr>
+        <h3>Ora crea la tua PassWord:</h3>
+        <div>
+            
+            <label for="Password">Nuova Password (Minimo 8 caratteri):</label>
+            <input type="password" id="Password" name="Password">
+        </div>
+        
+        <div>
+            <label for="pass"> Conferma la Password :</label>
+            <input type="password" id="pass" name="conferma password"
+                   minlength="8" required>
+        </div>
+        <label><input name="tos" type="checkbox" required checked> - Bottone</label>
+    </form>
+</body>
+</html>
