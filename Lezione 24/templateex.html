@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template ex</title>
+</head>
+<style>
+    table {
+        border: 1px solid black;
+        margin: 5px;
+    }
+</style>
+
+<body>
+    <table id="producttable">
+        <thead>
+            <tr>
+                <td>UPC_Code</td>
+                <td>Product_Name</td>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- existing data could optionally be included here -->
+        </tbody>
+    </table>
+
+    <template id="productrow">
+        <tr>
+            <td class="record"></td>
+            <td></td>
+        </tr>
+    </template>
+    <script>
+        
+        function populateTable(tbody, template, code, productName) {
+            const clone = template.content.cloneNode(true);
+            let td = clone.querySelectorAll("td");
+            td[0].textContent = code;
+            td[1].textContent = productName;
+            tbody.appendChild(clone);
+        }
+
+        // Test to see if the browser supports the HTML template element by checking
+        // for the presence of the template element's content attribute.
+        if ('content' in document.createElement('template')) {
+            // Instantiate the table with the existing HTML tbody
+            // and the row with the template
+            const tbody = document.querySelector("tbody");
+            const template = document.querySelector('#productrow');
+
+            let myArray = { "5645562": "ddd", "323223": "fff", "111": "xxx", "6634763": "aaabc" };
+            for (var key in myArray) {
+                //console.log("key " + key + " has value " + myArray[key]);
+                populateTable(tbody, template, key, myArray[key]);
+            }
+
+        } else {
+            // Find another way to add the rows to the table because
+            // the HTML template element is not supported.
+            console.log("non supportato");
+        }
+
+    </script>
+</body>
+
+</html>
